@@ -21,10 +21,7 @@ def hay_ids_repetidos_una_linea(lista_ids):
 ###Codigo para el proyecto
 UNIDADES_VALIDAS = {"UFC/g", "UFC/ml", "UFC/swab", "NMP/g", "NMP/ml"}
 CLIENTES_REGISTRADOS = {"0042", "1234", "5678"}
-UNIDADES_VALIDAS_MINUSCULAS = set()
-
-for unidad in UNIDADES_VALIDAS:
-    UNIDADES_VALIDAS_MINUSCULAS.add(unidad.lower())
+UNIDADES_VALIDAS_MINUSCULAS = {unidad.lower() for unidad in UNIDADES_VALIDAS}
 
 
 def es_unidad_valida(unidad):
